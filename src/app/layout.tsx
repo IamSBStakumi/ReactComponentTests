@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import GlobalStyle from "@/styles/GlobalStyles";
 import StyledComponentsRegistry from "@/lib/registry";
 
 const defaultUrl = "http://localhost:3000";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
@@ -20,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={inter.className}>
+      <body>
         <StyledComponentsRegistry>
           <GlobalStyle />
           {children}
