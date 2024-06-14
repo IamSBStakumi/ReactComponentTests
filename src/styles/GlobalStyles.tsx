@@ -5,10 +5,12 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   html {
     /* 基準1rem=10pxに設定 */
-    font-size: 62.5%
+    font-size: 62.5%;
+    height: 100%;
   }
 
   body {
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

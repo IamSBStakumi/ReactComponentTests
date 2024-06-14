@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import GlobalStyle from "@/styles/GlobalStyles";
 import StyledComponentsRegistry from "@/lib/registry";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const defaultUrl = "http://localhost:3000";
 
@@ -20,7 +22,9 @@ export default function RootLayout({
       <body>
         <StyledComponentsRegistry>
           <GlobalStyle />
+          <Header />
           {children}
+          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>
