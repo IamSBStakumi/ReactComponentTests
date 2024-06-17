@@ -9,7 +9,7 @@ const Explanation = styled.span`
   z-index: 10;
   display: block;
   visibility: hidden;
-  width: 240px
+  width: 240px;
   padding: 10px;
   margin-top: 20px;
   text-align: center;
