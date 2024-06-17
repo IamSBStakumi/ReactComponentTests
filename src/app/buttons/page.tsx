@@ -5,7 +5,7 @@ const Page = () => (
   <main>
     <div>
       <Button>
-        テストコンポーネント<Explanation $parent={Button}>説明</Explanation>
+        テストコンポーネント<Explanation>説明</Explanation>
       </Button>
     </div>
   </main>

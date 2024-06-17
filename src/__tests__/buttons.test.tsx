@@ -17,11 +17,11 @@ describe("ボタンのコンポーネントテスト", () => {
 
     const targetButton = screen.getByRole("button");
 
+    // ボタンにホバーしていないとExplanationが非表示
+    expect(screen.getByText("説明")).toHaveStyle("visibility: hidden");
+
     // ボタンにホバーするとExplanationが表示
     await user.hover(targetButton);
     expect(screen.getByText("説明")).toBeInTheDocument();
-    // ボタンからアンホバーするとExplanationが非表示
-    await user.unhover(targetButton);
-    expect(screen.queryByDisplayValue("説明")).toBeNull();
   });
 });

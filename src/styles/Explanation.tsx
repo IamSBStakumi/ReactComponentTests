@@ -1,23 +1,17 @@
 "use client";
 
 import styled from "styled-components";
-import { IStyledComponentBase } from "styled-components/dist/types";
 
-const Explanation = styled.span<{
-  $hover?: boolean;
-  $back?: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  $parent: IStyledComponentBase<any, any>;
-}>`
+const Explanation = styled.span`
   position: absolute;
   right: auto;
   left: 8%;
   z-index: 10;
-  display: inline;
-  visibility: ${(props) => (props.$hover ? "visible" : "hidden")};
-  width: ${(props) => (props.$back ? "auto" : "240px")};
+  display: block;
+  visibility: hidden;
+  width: 240px
   padding: 10px;
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
   color: #fff;
   background-color: rgb(12 110 183 / 100%);
@@ -32,9 +26,6 @@ const Explanation = styled.span<{
     border-right: 10px solid transparent;
     border-bottom: 12px solid rgb(12 110 183 / 100%);
     border-left: 10px solid transparent;
-  }
-  ${(props) => props.$parent}: hover & {
-    visibility: visible;
   }
 `;
 
