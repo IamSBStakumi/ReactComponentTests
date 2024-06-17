@@ -5,7 +5,7 @@ import styled from "styled-components";
 const FooterComponent = styled.footer`
   position: sticky;
   top: 100vh;
-  padding: 20px 0;
+  padding: 15px 0;
   text-align: center;
   color: #fff;
   background: #000;
