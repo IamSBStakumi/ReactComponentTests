@@ -10,7 +10,7 @@ const Button = styled.button`
 
   &:hover {
     > span {
-      visibility: visible
+      visibility: visible;
     }
   }
 `;
