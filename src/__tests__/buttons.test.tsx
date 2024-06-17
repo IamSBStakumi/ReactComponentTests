@@ -18,7 +18,7 @@ describe("ボタンのコンポーネントテスト", () => {
     const targetButton = screen.getByRole("button");
 
     // ボタンにホバーしていないとExplanationが非表示
-    expect(screen.getByText("説明")).toHaveStyle("visibility: hidden");
+    expect(screen.queryByText("説明")).not.toBeVisible();
 
     // ボタンにホバーするとExplanationが表示
     await user.hover(targetButton);
