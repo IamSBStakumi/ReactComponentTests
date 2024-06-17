@@ -10,14 +10,14 @@ const Explanation = styled.span<{
   $parent: IStyledComponentBase<any, any>;
 }>`
   position: absolute;
-  top: 5%;
   right: auto;
-  left: 10%;
+  left: 8%;
   z-index: 10;
-  display: ${(props) => (props.$hover ? "inline" : "none")};
+  display: inline;
+  visibility: ${(props) => (props.$hover ? "visible" : "hidden")};
   width: ${(props) => (props.$back ? "auto" : "240px")};
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 40px;
   text-align: center;
   color: #fff;
   background-color: rgb(12 110 183 / 100%);
@@ -34,7 +34,7 @@ const Explanation = styled.span<{
     border-left: 10px solid transparent;
   }
   ${(props) => props.$parent}: hover & {
-    display: inline;
+    visibility: visible;
   }
 `;
 
