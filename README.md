@@ -6,7 +6,7 @@ Sample implementation of various test cases in React.
 
 ## Languages
 
-<img src="https://img.shields.io/badge/-Next.js-000000.svg?logo=next.js&style=plastic" alt="Next.js">
+![Next.js](https://img.shields.io/badge/-Nextjs-000000.svg?logo=nextdotjs&style=plastic)
 
 ![Typescript](https://img.shields.io/badge/-Typescript-007ACC.svg?logo=typescript&style=plastic)
 
