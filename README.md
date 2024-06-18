@@ -17,3 +17,5 @@ Sample implementation of various test cases in React.
 ![Eslint](https://img.shields.io/badge/-Eslint-339933.svg?logo=eslint&style=plastic)
 
 ![Prettier](https://img.shields.io/badge/-Prettier-3749CE.svg?logo=prettier&style=plastic)
+
+![pre-commit](https://img.shields.io/badge/-precommit-AB49CE.svg?logo=precommit&style=plastic)
