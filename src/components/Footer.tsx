@@ -3,8 +3,7 @@
 import styled from "styled-components";
 
 const FooterComponent = styled.footer`
-  position: sticky;
-  top: 100vh;
+  margin-top: auto;
   padding: 15px 0;
   text-align: center;
   color: #fff;
