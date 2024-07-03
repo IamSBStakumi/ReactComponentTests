@@ -3,7 +3,7 @@ import { ImageProps } from "@/types/layout";
 const initImage = (maxOrderNum: number) =>
   ({
     type: "Image",
-    id: "",
+    id: "img1",
     orderNum: maxOrderNum,
     name: "imageFile",
     size: {

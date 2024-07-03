@@ -3,7 +3,7 @@ import { TextProps } from "@/types/layout";
 const initText = (maxOrderNum: number) =>
   ({
     type: "Text",
-    id: "",
+    id: "text1",
     orderNum: maxOrderNum,
     textContent: "",
     textFormat: {
