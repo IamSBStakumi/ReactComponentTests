@@ -8,11 +8,19 @@ const Text = styled.textarea<{
   $italic: boolean;
   $bold: boolean;
 }>`
+  background: transparent;
   color: ${({ $fontColor }) => `#${$fontColor}`};
   font-size: ${({ $fontSize }) => $fontSize};
   text-align: ${({ $textAlign }) => $textAlign};
   font-style: ${({ $italic }) => ($italic ? "italic" : "normal")};
   font-weight: ${({ $bold }) => ($bold ? "bold" : "normal")};
+  width: 100%;
+  height: 100%;
+  border: none;
+
+  :active & {
+    cursor: grabbing;
+  }
 `;
 
 const Wrapper = styled.div<{ $x: number; $y: number; $width: number; $height: number; $orderNum: number }>`
@@ -22,6 +30,8 @@ const Wrapper = styled.div<{ $x: number; $y: number; $width: number; $height: nu
   width: ${({ $width }) => $width}px;
   height: ${({ $height }) => $height}px;
   z-index: ${({ $orderNum }) => $orderNum};
+  width: 100%;
+  height: 100%;
 `;
 
 const TextElem = ({ elem }: { elem: TextProps }) => {
@@ -31,9 +41,14 @@ const TextElem = ({ elem }: { elem: TextProps }) => {
 
   return (
     <Wrapper $x={x} $y={y} $width={width} $height={height} $orderNum={elem.orderNum}>
-      <Text $fontColor={fontColor} $fontSize={fontSize} $textAlign={textAlign} $italic={italic} $bold={bold}>
-        {elem.textContent}
-      </Text>
+      <Text
+        $fontColor={fontColor}
+        $fontSize={fontSize}
+        $textAlign={textAlign}
+        $italic={italic}
+        $bold={bold}
+        defaultValue={elem.textContent}
+      />
     </Wrapper>
   );
 };

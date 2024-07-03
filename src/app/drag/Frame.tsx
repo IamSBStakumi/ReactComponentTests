@@ -1,5 +1,6 @@
 "use client";
 
+import { Rnd } from "react-rnd";
 import styled from "styled-components";
 import LayoutProps from "@/types/layout";
 import Element from "./Elements/Element";
@@ -16,11 +17,26 @@ const FrameComponent = styled.div`
   box-shadow: 1px 1px #999;
 `;
 
+const StyledRnd = styled(Rnd)`
+  border: 2px solid #888;
+`;
+
 const Frame = ({ layouts }: { layouts: LayoutProps }) => {
   return (
-    <FrameComponent>
+    <FrameComponent className="Frame">
       {layouts.map((element) => (
-        <Element elem={element} key={element.id} />
+        <StyledRnd
+          key={element.id}
+          default={{
+            x: element.position.x,
+            y: element.position.y,
+            width: element.size.width,
+            height: element.size.height,
+          }}
+          bounds="parent"
+        >
+          <Element elem={element} />
+        </StyledRnd>
       ))}
     </FrameComponent>
   );

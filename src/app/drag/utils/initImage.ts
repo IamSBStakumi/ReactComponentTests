@@ -7,8 +7,8 @@ const initImage = (maxOrderNum: number) =>
     orderNum: maxOrderNum,
     name: "imageFile",
     size: {
-      width: 200,
-      height: 50,
+      width: 180,
+      height: 180,
     },
     position: {
       x: 0,
