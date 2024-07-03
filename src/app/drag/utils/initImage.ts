@@ -1,9 +1,10 @@
+import { v4 as uuidv4 } from "uuid";
 import { ImageProps } from "@/types/layout";
 
 const initImage = (maxOrderNum: number) =>
   ({
     type: "Image",
-    id: "img1",
+    id: uuidv4(),
     orderNum: maxOrderNum,
     name: "imageFile",
     size: {

@@ -1,9 +1,10 @@
+import { v4 as uuidv4 } from "uuid";
 import { TextProps } from "@/types/layout";
 
 const initText = (maxOrderNum: number) =>
   ({
     type: "Text",
-    id: "text1",
+    id: uuidv4(),
     orderNum: maxOrderNum,
     textContent: "",
     textFormat: {
