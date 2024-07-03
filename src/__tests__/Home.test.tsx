@@ -11,5 +11,6 @@ describe("ホームのコンポーネントテスト", () => {
     expect(screen.getByText("Checkbox")).toBeInTheDocument();
     expect(screen.getByText("Modal")).toBeInTheDocument();
     expect(screen.getByText("Tab")).toBeInTheDocument();
+    expect(screen.getByText("Drag&Drop")).toBeInTheDocument();
   });
 });

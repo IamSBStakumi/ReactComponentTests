@@ -18,6 +18,7 @@ export default function Home() {
         <LinkText href="/checkbox">Checkbox</LinkText>
         <LinkText href="/modal">Modal</LinkText>
         <LinkText href="/tab">Tab</LinkText>
+        <LinkText href="/drag">Drag&Drop</LinkText>
       </div>
     </main>
   );
