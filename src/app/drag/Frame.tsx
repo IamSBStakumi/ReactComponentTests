@@ -23,7 +23,7 @@ const StyledRnd = styled(Rnd)`
 
 const Frame = ({ layouts }: { layouts: LayoutProps }) => {
   return (
-    <FrameComponent className="Frame">
+    <FrameComponent>
       {layouts.map((element) => (
         <StyledRnd
           key={element.id}
