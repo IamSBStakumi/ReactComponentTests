@@ -17,39 +17,26 @@ const Text = styled.textarea<{
   width: 100%;
   height: 100%;
   border: none;
+  overflow: hidden;
+  resize: none;
 
   :active & {
     cursor: grabbing;
   }
 `;
 
-const Wrapper = styled.div<{ $x: number; $y: number; $width: number; $height: number; $orderNum: number }>`
-  position: absolute;
-  top: ${({ $y }) => $y}px;
-  left: ${({ $x }) => $x}px;
-  width: ${({ $width }) => $width}px;
-  height: ${({ $height }) => $height}px;
-  z-index: ${({ $orderNum }) => $orderNum};
-  width: 100%;
-  height: 100%;
-`;
-
 const TextElem = ({ elem }: { elem: TextProps }) => {
   const { fontColor, fontSize, textAlign, italic, bold } = elem.textFormat;
-  const { x, y } = elem.position;
-  const { width, height } = elem.size;
 
   return (
-    <Wrapper $x={x} $y={y} $width={width} $height={height} $orderNum={elem.orderNum}>
-      <Text
-        $fontColor={fontColor}
-        $fontSize={fontSize}
-        $textAlign={textAlign}
-        $italic={italic}
-        $bold={bold}
-        defaultValue={elem.textContent}
-      />
-    </Wrapper>
+    <Text
+      $fontColor={fontColor}
+      $fontSize={fontSize}
+      $textAlign={textAlign}
+      $italic={italic}
+      $bold={bold}
+      defaultValue={elem.textContent}
+    />
   );
 };
 
