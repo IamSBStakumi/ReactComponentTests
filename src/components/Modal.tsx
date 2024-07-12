@@ -5,6 +5,8 @@ import styled from "styled-components";
 import Button from "@mui/material/Button";
 import ErrorRoundedIcon from "@mui/icons-material/ErrorRounded";
 
+Modal.setAppElement(".ModalPage");
+
 const StyledModal = styled(Modal)`
   position: relative;
   top: 50%;

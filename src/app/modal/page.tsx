@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 import { StyledModal, Title, ModalMessage, ErrorMessage, OKButton, ErrorIcon } from "@/components/Modal";
-import Modal from "react-modal";
-
-Modal.setAppElement(".ModalPage");
 
 const Page = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -22,12 +19,7 @@ const Page = () => {
   return (
     <div className="ModalPage">
       <button onClick={handleClick}>モーダルオープン</button>
-      <StyledModal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        //   ariaHideApp={false}
-        contentLabel="AlertModal"
-      >
+      <StyledModal isOpen={modalIsOpen} onRequestClose={closeModal}>
         <Title>
           {ErrorIcon}
           <ErrorMessage id="modal-title">警告</ErrorMessage>
