@@ -8,9 +8,7 @@ const StyledImage = styled(Image)`
 `;
 
 const ImageElem = ({ imageName }: { imageName: string }) => {
-  console.log(imageName);
-
-  return <StyledImage alt="CommonImage" src={imgSrc} draggable="false" />;
+  return <StyledImage alt={imageName} src={imgSrc} draggable="false" />;
 };
 
 export default ImageElem;
