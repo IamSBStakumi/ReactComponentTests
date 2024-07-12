@@ -48,14 +48,14 @@ const Li = styled.li<{ $isActive: boolean }>`
 const Tab = ({
   children,
   active,
+  tabNames,
   setActive,
 }: {
   children: ReactElement;
   active: number;
+  tabNames: string[];
   setActive: React.Dispatch<React.SetStateAction<number>>;
 }) => {
-  const tabNames = ["タブ1", "タブ2"];
-
   return (
     <div>
       <Ul>

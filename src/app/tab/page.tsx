@@ -9,7 +9,7 @@ const Page = () => {
 
   return (
     <div>
-      <Tab active={active} setActive={setActive}>
+      <Tab active={active} setActive={setActive} tabNames={tabNames}>
         <h1>{tabNames[active]}</h1>
       </Tab>
     </div>
